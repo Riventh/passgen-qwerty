@@ -15,12 +15,10 @@ function loadLayouts() {
 }
 
 // DOM Elements
-var layoutSelect = document.getElementById('layout-select');
 var passwordLength = document.getElementById('password-length');
 var lengthValue = document.getElementById('length-value');
 var includeLowercase = document.getElementById('include-lowercase');
 var includeUppercase = document.getElementById('include-uppercase');
-var includeNumbers = document.getElementById('include-numbers');
 var includeSpecial = document.getElementById('include-special');
 var generateBtn = document.getElementById('generate-btn');
 var passwordOutput = document.getElementById('password-output');
@@ -38,10 +36,8 @@ passwordLength.addEventListener('input', function(e) {
     lengthValue.textContent = e.target.value;
 });
 
-layoutSelect.addEventListener('change', updateCharacterPreview);
 includeLowercase.addEventListener('change', updateCharacterPreview);
 includeUppercase.addEventListener('change', updateCharacterPreview);
-includeNumbers.addEventListener('change', updateCharacterPreview);
 includeSpecial.addEventListener('change', updateCharacterPreview);
 
 generateBtn.addEventListener('click', generatePassword);
@@ -51,9 +47,7 @@ copyBtn.addEventListener('click', copyToClipboard);
 function updateCharacterPreview() {
     if (!layouts) return;
 
-    var selectedLayout = layoutSelect.value;
-    var layout = layouts[selectedLayout];
-
+    var layout = layouts.common;
     var availableChars = [];
 
     if (includeLowercase.checked) {
@@ -61,9 +55,6 @@ function updateCharacterPreview() {
     }
     if (includeUppercase.checked) {
         availableChars = availableChars.concat(layout.uppercase);
-    }
-    if (includeNumbers.checked) {
-        availableChars = availableChars.concat(layout.numbers);
     }
     if (includeSpecial.checked) {
         availableChars = availableChars.concat(layout.special);
@@ -85,8 +76,7 @@ function generatePassword() {
         return;
     }
 
-    var selectedLayout = layoutSelect.value;
-    var layout = layouts[selectedLayout];
+    var layout = layouts.common;
     var length = parseInt(passwordLength.value);
 
     // Build character pool based on selections
@@ -97,9 +87,6 @@ function generatePassword() {
     }
     if (includeUppercase.checked) {
         charPool = charPool.concat(layout.uppercase);
-    }
-    if (includeNumbers.checked) {
-        charPool = charPool.concat(layout.numbers);
     }
     if (includeSpecial.checked) {
         charPool = charPool.concat(layout.special);

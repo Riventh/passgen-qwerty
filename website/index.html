@@ -10,19 +10,18 @@
     <div class="container">
         <header>
             <h1>Password Generator</h1>
-            <p class="subtitle">QWERTY & AZERTY Keyboard Layout Compatible</p>
+            <p class="subtitle">Cross-Layout Compatible (QWERTY & AZERTY)</p>
+            <p class="subtitle-small">Only uses characters in the same position on both keyboards</p>
         </header>
 
         <main>
             <section class="config-section">
                 <h2>Configuration</h2>
 
-                <div class="form-group">
-                    <label for="layout-select">Keyboard Layout:</label>
-                    <select id="layout-select">
-                        <option value="qwerty">QWERTY (US)</option>
-                        <option value="azerty">AZERTY (French)</option>
-                    </select>
+                <div class="info-box">
+                    <p><strong>Cross-Layout Compatibility:</strong> This generator only uses characters that produce the same result on both QWERTY and AZERTY keyboards.</p>
+                    <p><strong>Available:</strong> All 26 letters (a-z, A-Z) and 9 special characters</p>
+                    <p><strong>Not available:</strong> Numbers 0-9 (different positions on each layout)</p>
                 </div>
 
                 <div class="form-group">
@@ -33,28 +32,21 @@
                 <div class="form-group">
                     <label class="checkbox-label">
                         <input type="checkbox" id="include-lowercase" checked>
-                        Lowercase Letters (a-z)
+                        Lowercase Letters (a-z) - 26 characters
                     </label>
                 </div>
 
                 <div class="form-group">
                     <label class="checkbox-label">
                         <input type="checkbox" id="include-uppercase" checked>
-                        Uppercase Letters (A-Z)
-                    </label>
-                </div>
-
-                <div class="form-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="include-numbers" checked>
-                        Numbers (0-9)
+                        Uppercase Letters (A-Z) - 26 characters
                     </label>
                 </div>
 
                 <div class="form-group">
                     <label class="checkbox-label">
                         <input type="checkbox" id="include-special">
-                        Special Characters
+                        Special Characters (" ' * + , - . / ;) - 9 characters
                     </label>
                 </div>
 

@@ -39,6 +39,12 @@ header h1 {
 .subtitle {
     font-size: 1.1rem;
     opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.subtitle-small {
+    font-size: 0.9rem;
+    opacity: 0.85;
 }
 
 /* Main Content */
@@ -62,6 +68,25 @@ h3 {
     color: #764ba2;
     margin-bottom: 15px;
     font-size: 1.2rem;
+}
+
+/* Info Box */
+.info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.info-box p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-box strong {
+    color: #667eea;
 }
 
 /* Form Groups */
