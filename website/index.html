@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - QWERTY/AZERTY Compatible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Password Generator</h1>
+            <p class="subtitle">QWERTY & AZERTY Keyboard Layout Compatible</p>
+        </header>
+
+        <main>
+            <section class="config-section">
+                <h2>Configuration</h2>
+
+                <div class="form-group">
+                    <label for="layout-select">Keyboard Layout:</label>
+                    <select id="layout-select">
+                        <option value="qwerty">QWERTY (US)</option>
+                        <option value="azerty">AZERTY (French)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-length">Password Length: <span id="length-value">16</span></label>
+                    <input type="range" id="password-length" min="4" max="128" value="16">
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-lowercase" checked>
+                        Lowercase Letters (a-z)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-uppercase" checked>
+                        Uppercase Letters (A-Z)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-numbers" checked>
+                        Numbers (0-9)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-special">
+                        Special Characters
+                    </label>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">Generate Password</button>
+            </section>
+
+            <section class="result-section">
+                <h2>Generated Password</h2>
+
+                <div class="password-display">
+                    <input type="text" id="password-output" readonly placeholder="Click 'Generate Password' to create a password">
+                    <button id="copy-btn" class="icon-btn" title="Copy to clipboard" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="entropy-info">
+                    <h3>Password Strength</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Character Pool Size:</span>
+                        <span id="pool-size" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Password Length:</span>
+                        <span id="actual-length" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Entropy:</span>
+                        <span id="entropy-value" class="stat-value">-</span>
+                    </div>
+                    <div class="strength-bar-container">
+                        <div id="strength-bar" class="strength-bar"></div>
+                    </div>
+                    <p id="strength-text" class="strength-text"></p>
+                </div>
+
+                <div class="character-preview">
+                    <h3>Available Characters</h3>
+                    <div id="char-preview" class="char-display"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Entropy Calculation</h3>
+            <p><strong>Formula:</strong> E = L × Log₂(R)</p>
+            <p>E = Entropy (bits) | L = Password Length | R = Character Pool Size</p>
+
+            <h3>Security Recommendations</h3>
+            <p><strong>Minimum recommended entropy:</strong> 80 bits (ANSSI)</p>
+            <p><strong>Good protection:</strong> 100+ bits</p>
+
+            <h3>Sources</h3>
+            <ul class="sources-list">
+                <li>
+                    <strong>Entropy Calculation:</strong>
+                    <a href="https://proton.me/blog/what-is-password-entropy" target="_blank" rel="noopener noreferrer">
+                        What is Password Entropy? - Proton
+                    </a>
+                </li>
+                <li>
+                    <strong>Security Standards:</strong>
+                    <a href="https://cyber.gouv.fr/sites/default/files/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf" target="_blank" rel="noopener noreferrer">
+                        ANSSI - Guide Authentification Multifacteur et Mots de Passe (PDF)
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast">Password copied to clipboard!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
