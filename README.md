@@ -1,11 +1,19 @@
-# Password Generator - QWERTY/AZERTY Compatible
+# Password Generator - Cross-Layout Compatible
 
-A vanilla HTML/CSS/JavaScript password generator that creates secure passwords compatible with QWERTY and AZERTY keyboard layouts.
+A vanilla HTML/CSS/JavaScript password generator that creates secure passwords using only characters that are in the **same physical position** on both QWERTY and AZERTY keyboard layouts.
+
+## Key Concept
+
+This generator ensures your password can be typed correctly on **both QWERTY and AZERTY keyboards** without switching layouts. It analyzes both keyboard layouts and only uses characters that produce the same result at the same key position on both layouts.
 
 ## Features
 
-- **Keyboard Layout Support**: Choose between QWERTY (US) and AZERTY (French) layouts
-- **Customizable Character Sets**: Select from lowercase, uppercase, numbers, and special characters
+- **Cross-Layout Compatibility**: Uses only characters in identical positions on QWERTY and AZERTY
+- **Character Analysis**:
+  - ✅ All 26 letters (a-z, A-Z) are compatible
+  - ❌ Numbers 0-9 are **NOT** compatible (different positions)
+  - ✅ 9 special characters are compatible (" ' * + , - . / ;)
+- **Customizable Character Sets**: Select from lowercase, uppercase, and special characters
 - **Adjustable Length**: Generate passwords from 4 to 128 characters
 - **Entropy Calculation**: Real-time password strength calculation using the formula `E = L × Log₂(R)`
   - E = Entropy (in bits)
@@ -26,8 +34,9 @@ passgen_qwerty/
 │   ├── app.js           # Vanilla JavaScript for password generation
 │   ├── style.css        # Responsive CSS styling
 │   └── layouts.json     # Keyboard layout character mappings (generated)
-├── preprocessing/        # Pre-processing scripts
-│   └── parse_layouts.js # Node.js script to convert XML layouts to JSON
+├── preprocessing/                # Pre-processing scripts
+│   ├── parse_layouts.js         # Original parser (per-layout)
+│   └── parse_layouts_common.js  # Cross-layout parser (finds common chars)
 ├── data/                # Source XML keyboard layout files
 │   ├── us_qwerty_layout.xml
 │   └── french_azerty_standard.xml
@@ -52,29 +61,24 @@ python3 -m http.server 8080
 
 ### Generating Passwords
 
-1. Select your keyboard layout (QWERTY or AZERTY)
-2. Set the desired password length using the slider
-3. Choose which character types to include:
-   - Lowercase letters (a-z)
-   - Uppercase letters (A-Z)
-   - Numbers (0-9)
-   - Special characters
-4. Click "Generate Password"
-5. Copy the password using the copy button
+1. Set the desired password length using the slider (4-128 characters)
+2. Choose which character types to include:
+   - Lowercase letters (a-z) - 26 characters
+   - Uppercase letters (A-Z) - 26 characters
+   - Special characters (" ' * + , - . / ;) - 9 characters
+3. Click "Generate Password"
+4. Copy the password using the copy button
 
-### Character Availability
+### Available Characters (Cross-Layout Compatible)
 
-**QWERTY Layout:**
-- Lowercase: 26 characters
-- Uppercase: 26 characters
-- Numbers: 10 characters
-- Special: 32 characters
+**Compatible on BOTH QWERTY and AZERTY:**
+- Lowercase letters: `abcdefghijklmnopqrstuvwxyz` (26 chars)
+- Uppercase letters: `ABCDEFGHIJKLMNOPQRSTUVWXYZ` (26 chars)
+- Special characters: `" ' * + , - . / ;` (9 chars)
 
-**AZERTY Layout:**
-- Lowercase: 26 characters
-- Uppercase: 26 characters
-- Numbers: 10 characters
-- Special: 33 characters (includes French characters: à, è, é, ê, «, », etc.)
+**NOT Compatible (excluded from generation):**
+- Numbers `0-9`: These keys produce different characters on QWERTY vs AZERTY
+- Most special characters: Different symbols appear at the same positions
 
 ## Entropy Strength Guide
 
@@ -93,16 +97,27 @@ According to [ANSSI](https://cyber.gouv.fr/sites/default/files/2021/10/anssi-gui
 
 ### Converting XML Layouts to JSON
 
-If you need to update the keyboard layouts:
+The project includes two parsing scripts:
 
+**1. Cross-Layout Parser (Current Active Version)**
+```bash
+cd preprocessing
+node parse_layouts_common.js
+```
+
+This will:
+- Analyze both QWERTY and AZERTY XML layouts
+- Find only characters in identical positions on both keyboards
+- Generate `website/layouts.json` with the common character set
+- Display a report of compatible and incompatible characters
+
+**2. Individual Layout Parser (Original)**
 ```bash
 cd preprocessing
 node parse_layouts.js
 ```
 
-This will:
-1. Parse the XML files in the `data/` folder
-2. Generate `website/layouts.json` with the character mappings for both layouts
+This generates separate character sets for each layout (not used in current version).
 
 ## Source Layouts
 
