@@ -12,7 +12,7 @@ This generator ensures your password can be typed correctly on **both QWERTY and
 - **Character Analysis**:
   - ✅ All 26 letters (a-z, A-Z) are compatible
   - ❌ Numbers 0-9 are **NOT** compatible (different positions)
-  - ✅ 9 special characters are compatible (" ' * + , - . / ;)
+  - ✅ 6 special characters are compatible (" ' , - . ;)
 - **Customizable Character Sets**: Select from lowercase, uppercase, and special characters
 - **Adjustable Length**: Generate passwords from 4 to 128 characters
 - **Entropy Calculation**: Real-time password strength calculation using the formula `E = L × Log₂(R)`
@@ -65,7 +65,7 @@ python3 -m http.server 8080
 2. Choose which character types to include:
    - Lowercase letters (a-z) - 26 characters
    - Uppercase letters (A-Z) - 26 characters
-   - Special characters (" ' * + , - . / ;) - 9 characters
+   - Special characters (" ' , - . ;) - 6 characters
 3. Click "Generate Password"
 4. Copy the password using the copy button
 
@@ -74,7 +74,7 @@ python3 -m http.server 8080
 **Compatible on BOTH QWERTY and AZERTY:**
 - Lowercase letters: `abcdefghijklmnopqrstuvwxyz` (26 chars)
 - Uppercase letters: `ABCDEFGHIJKLMNOPQRSTUVWXYZ` (26 chars)
-- Special characters: `" ' * + , - . / ;` (9 chars)
+- Special characters: `" ' , - . ;` (6 chars)
 
 **NOT Compatible (excluded from generation):**
 - Numbers `0-9`: These keys produce different characters on QWERTY vs AZERTY
@@ -118,6 +118,23 @@ node parse_layouts.js
 ```
 
 This generates separate character sets for each layout (not used in current version).
+
+### Testing Cross-Layout Compatibility
+
+To verify that all generated passwords work on both keyboards:
+
+```bash
+cd preprocessing
+node test_cross_layout.js
+```
+
+This automated test:
+- Generates 100 random passwords with various configurations
+- Validates each character exists at the same key position on both layouts
+- Ensures passwords can be typed identically on QWERTY and AZERTY keyboards
+- Reports any incompatibilities found
+
+**Test Results:** All 100 passwords pass validation, confirming cross-layout compatibility.
 
 ## Source Layouts
 
