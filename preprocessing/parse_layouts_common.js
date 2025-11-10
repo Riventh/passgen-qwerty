@@ -60,6 +60,13 @@ for (const [virtualKey, qwertyChars] of qwertyPositions) {
 
     if (!azertyChars) continue;
 
+    // Skip numpad keys - they're not universally available and can cause conflicts
+    if (virtualKey.startsWith('VK_NUMPAD') || virtualKey === 'VK_DECIMAL' ||
+        virtualKey === 'VK_ADD' || virtualKey === 'VK_SUBTRACT' ||
+        virtualKey === 'VK_MULTIPLY' || virtualKey === 'VK_DIVIDE') {
+        continue;
+    }
+
     // Check normal key (unshifted)
     if (qwertyChars.normal === azertyChars.normal) {
         const category = categorizeChar(qwertyChars.normal);
