@@ -19,7 +19,6 @@ var passwordLength = document.getElementById('password-length');
 var lengthValue = document.getElementById('length-value');
 var includeLowercase = document.getElementById('include-lowercase');
 var includeUppercase = document.getElementById('include-uppercase');
-var includeSpecial = document.getElementById('include-special');
 var generateBtn = document.getElementById('generate-btn');
 var passwordOutput = document.getElementById('password-output');
 var copyBtn = document.getElementById('copy-btn');
@@ -38,7 +37,6 @@ passwordLength.addEventListener('input', function(e) {
 
 includeLowercase.addEventListener('change', updateCharacterPreview);
 includeUppercase.addEventListener('change', updateCharacterPreview);
-includeSpecial.addEventListener('change', updateCharacterPreview);
 
 generateBtn.addEventListener('click', generatePassword);
 copyBtn.addEventListener('click', copyToClipboard);
@@ -55,9 +53,6 @@ function updateCharacterPreview() {
     }
     if (includeUppercase.checked) {
         availableChars = availableChars.concat(layout.uppercase);
-    }
-    if (includeSpecial.checked) {
-        availableChars = availableChars.concat(layout.special);
     }
 
     if (availableChars.length === 0) {
@@ -87,9 +82,6 @@ function generatePassword() {
     }
     if (includeUppercase.checked) {
         charPool = charPool.concat(layout.uppercase);
-    }
-    if (includeSpecial.checked) {
-        charPool = charPool.concat(layout.special);
     }
 
     // Validate at least one character type is selected
