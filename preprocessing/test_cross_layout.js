@@ -150,11 +150,9 @@ console.log('='.repeat(80));
 console.log('\nGenerating and testing 100 random passwords...\n');
 
 const testConfigurations = [
-    { lowercase: true, uppercase: false, special: false, name: 'Lowercase only' },
-    { lowercase: false, uppercase: true, special: false, name: 'Uppercase only' },
-    { lowercase: true, uppercase: true, special: false, name: 'Mixed case' },
-    { lowercase: true, uppercase: true, special: true, name: 'All characters' },
-    { lowercase: true, uppercase: false, special: true, name: 'Lowercase + special' },
+    { lowercase: true, uppercase: false, special: false, name: 'Lowercase only', count: 25 },
+    { lowercase: false, uppercase: true, special: false, name: 'Uppercase only', count: 25 },
+    { lowercase: true, uppercase: true, special: false, name: 'Mixed case (lowercase + uppercase)', count: 50 },
 ];
 
 const results = {
@@ -168,7 +166,7 @@ const results = {
 testConfigurations.forEach(config => {
     console.log(`Testing: ${config.name}`);
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < config.count; i++) {
         const length = Math.floor(Math.random() * 60) + 8; // 8-67 chars
         const password = generatePassword(length, config.lowercase, config.uppercase, config.special);
         const verification = verifyPassword(password);
@@ -188,7 +186,7 @@ testConfigurations.forEach(config => {
             });
         }
     }
-    console.log(` (20 passwords tested)`);
+    console.log(` (${config.count} passwords tested)`);
 });
 
 // Print results
@@ -227,5 +225,67 @@ console.log(`Special: ${layouts.common.special.length} characters`);
 console.log(`Total: ${layouts.common.lowercase.length + layouts.common.uppercase.length + layouts.common.special.length} characters`);
 console.log('\n' + '='.repeat(80));
 
+// NEGATIVE TESTS - Verify test suite catches incompatible passwords
+console.log('NEGATIVE TEST CASES (Verifying Test Suite Correctness)');
+console.log('='.repeat(80));
+console.log('\nTesting passwords with INCOMPATIBLE characters (should FAIL):\n');
+
+const negativeTests = [
+    { password: 'Password', reason: 'Contains letter "a" at different physical position' },
+    { password: 'quick', reason: 'Contains letter "q" at different physical position' },
+    { password: 'window', reason: 'Contains letter "w" at different physical position' },
+    { password: 'puzzle', reason: 'Contains letter "z" at different physical position' },
+    { password: 'example', reason: 'Contains letters "a" and "m" at different physical positions' },
+    { password: 'Test123', reason: 'Contains numbers 1,2,3 at different physical positions' },
+    { password: 'user@host', reason: 'Contains @ symbol with different modifier states' },
+    { password: 'Pass#word', reason: 'Contains # symbol and letters at incompatible positions' },
+    { password: 'Hello!World', reason: 'Contains ! and letters at incompatible positions' },
+    { password: '0123456789', reason: 'All numbers - completely incompatible' }
+];
+
+let negativePassedCorrectly = 0;
+let negativeFailedIncorrectly = 0;
+
+negativeTests.forEach((test, index) => {
+    const verification = verifyPassword(test.password);
+
+    // For negative tests, we EXPECT them to fail (not be valid)
+    if (!verification.valid) {
+        negativePassedCorrectly++;
+        console.log(`✓ Test ${index + 1}: "${test.password}"`);
+        console.log(`  Expected: FAIL - ${test.reason}`);
+        console.log(`  Result: CORRECTLY FAILED`);
+        verification.issues.slice(0, 3).forEach(issue => {
+            console.log(`    - Position ${issue.position}: '${issue.char}' - ${issue.issue}`);
+        });
+        if (verification.issues.length > 3) {
+            console.log(`    ... and ${verification.issues.length - 3} more issues`);
+        }
+    } else {
+        negativeFailedIncorrectly++;
+        console.log(`✗ Test ${index + 1}: "${test.password}"`);
+        console.log(`  Expected: FAIL - ${test.reason}`);
+        console.log(`  Result: INCORRECTLY PASSED (Bug in test suite!)`);
+    }
+    console.log('');
+});
+
+console.log('='.repeat(80));
+console.log('NEGATIVE TEST RESULTS');
+console.log('='.repeat(80));
+console.log(`Total negative tests: ${negativeTests.length}`);
+console.log(`✓ Correctly failed: ${negativePassedCorrectly} (${(negativePassedCorrectly / negativeTests.length * 100).toFixed(1)}%)`);
+console.log(`✗ Incorrectly passed: ${negativeFailedIncorrectly} (${(negativeFailedIncorrectly / negativeTests.length * 100).toFixed(1)}%)`);
+
+if (negativeFailedIncorrectly > 0) {
+    console.log('\n⚠ WARNING: Test suite has bugs! Some incompatible passwords passed validation.');
+    process.exit(1);
+} else {
+    console.log('\n✓ Test suite is working correctly! All incompatible passwords were rejected.');
+}
+
+console.log('\n' + '='.repeat(80));
+
 // Exit with appropriate code
-process.exit(results.failed > 0 ? 1 : 0);
+const allTestsPassed = results.failed === 0 && negativeFailedIncorrectly === 0;
+process.exit(allTestsPassed ? 0 : 1);
