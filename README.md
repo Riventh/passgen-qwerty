@@ -2,6 +2,29 @@
 
 A vanilla HTML/CSS/JavaScript password generator that creates secure passwords using only characters that are in the **same physical position** on both QWERTY and AZERTY keyboard layouts.
 
+## Quick Start
+
+**Use the standalone single-file version:**
+```bash
+# Simply open the standalone HTML file in your browser
+open website/standalone.html
+```
+
+The standalone version works offline without any web server - just double-click the file!
+
+## Use Case: BitLocker / VeraCrypt Pre-Boot Authentication
+
+This password generator is particularly useful for **BitLocker** and **VeraCrypt** full-disk encryption where:
+- The pre-boot authentication screen is **always in QWERTY layout** (regardless of your OS keyboard setting)
+- If you normally use an AZERTY keyboard, typing your password at boot can be confusing
+- Using this generator ensures you can type the same password correctly on **both** layouts
+
+**Example scenario:**
+1. You use an AZERTY keyboard in Windows/Linux
+2. You encrypt your disk with BitLocker/VeraCrypt
+3. At boot, the pre-boot screen is in QWERTY
+4. With a password from this generator, you type the same keys and get the same password on both layouts!
+
 ## Key Concept
 
 This generator ensures your password can be typed correctly on **both QWERTY and AZERTY keyboards** without switching layouts. It analyzes both keyboard layouts and only uses characters that produce the same result at the same key position on both layouts.
