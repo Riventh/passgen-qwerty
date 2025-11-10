@@ -1,0 +1,1 @@
+# password generator qwerty compatible
