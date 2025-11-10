@@ -1,0 +1,820 @@
+<KbdDll>
+<KbdLayerDescriptor>
+<KbdLayer MaxVSCtoVK="127" Version="1" LocaleFlags="ALTGR" LgMax="0" LgEntry="0" Type="0" SubType="0">
+<CharModifiers>
+<MODIFIERS MaxModBits="7" ModNumber="0 1 2 3 15 15 4 5">
+<VkToBit>
+<VK_TO_BIT Vk="VK_SHIFT" ModBits="KBDSHIFT"/>
+<VK_TO_BIT Vk="VK_CONTROL" ModBits="KBDCTRL"/>
+<VK_TO_BIT Vk="VK_MENU" ModBits="KBDALT"/>
+</VkToBit>
+</MODIFIERS>
+</CharModifiers>
+<VkToWcharTable>
+<VK_TO_WCHAR_TABLE Modifications="3" Size="8">
+<VkToWchars>
+<VK_TO_WCHARS Wch="0008 0008 007F" VirtualKey="VK_BACK"/>
+<VK_TO_WCHARS Wch="001B 001B 001B" VirtualKey="VK_ESCAPE"/>
+<VK_TO_WCHARS Wch="000D 000D 000A" VirtualKey="VK_RETURN"/>
+<VK_TO_WCHARS Wch="0003 0003 0003" VirtualKey="VK_CANCEL"/>
+</VkToWchars>
+</VK_TO_WCHAR_TABLE>
+<VK_TO_WCHAR_TABLE Modifications="6" Size="14">
+<VkToWchars>
+<VK_TO_WCHARS Wch="00E0 0031 F000 F000 00A7 00C0" VirtualKey="VK_1" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="00E9 0032 F000 F000 F001 00C9" VirtualKey="VK_2" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 00B4 F000"/>
+<VK_TO_WCHARS Wch="00E8 0033 F000 F000 F001 00C8" VirtualKey="VK_3" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 0060 F000"/>
+<VK_TO_WCHARS Wch="00EA 0034 F000 F000 0026 00CA" VirtualKey="VK_4" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0028 0035 F000 F000 005B F001" VirtualKey="VK_5" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 F000 02DD"/>
+<VK_TO_WCHARS Wch="0029 0036 F000 F000 005D F001" VirtualKey="VK_6" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 F000 02F5"/>
+<VK_TO_WCHARS Wch="2018 0037 F000 F000 F001 F000" VirtualKey="VK_7" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 00AF F000"/>
+<VK_TO_WCHARS Wch="2019 0038 F000 F000 005F 2014" VirtualKey="VK_8" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="00AB 0039 F000 F000 201C 2039" VirtualKey="VK_9" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="00BB 0030 F000 0000 201D 203A" VirtualKey="VK_0" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0027 0022 F000 F000 00B0 F001" VirtualKey="VK_OEM_7"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 F000 02DA"/>
+<VK_TO_WCHARS Wch="F001 F001 F000 001E F001 F000" VirtualKey="VK_OEM_6"/>
+<VK_TO_WCHARS Wch="005E 00A8 F000 F000 02C7 F000"/>
+<VK_TO_WCHARS Wch="0061 0041 F000 F000 00E6 00C6" VirtualKey="VK_A" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="007A 005A F000 F000 00A3 F000" VirtualKey="VK_Z" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0065 0045 F000 F000 20AC F000" VirtualKey="VK_E" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0072 0052 F000 F000 00AE F000" VirtualKey="VK_R" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0074 0054 F000 F000 007B 2122" VirtualKey="VK_T" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0079 0059 F000 F000 007D F000" VirtualKey="VK_Y" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0075 0055 F000 F000 00F9 00D9" VirtualKey="VK_U" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="006F 004F F000 F000 0153 0152" VirtualKey="VK_O" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0070 0050 F000 F000 0025 2030" VirtualKey="VK_P" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="002D 2013 001B 001F 2212 2011" VirtualKey="VK_OEM_MINUS"/>
+<VK_TO_WCHARS Wch="002B 00B1 001D F000 2020 2021" VirtualKey="VK_OEM_PLUS"/>
+<VK_TO_WCHARS Wch="0071 0051 F000 F000 03B8 03F4" VirtualKey="VK_Q" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0073 0053 F000 F000 00DF 1E9E" VirtualKey="VK_S" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0064 0044 F000 F000 0024 F000" VirtualKey="VK_D" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0066 0046 F000 F000 F001 F000" VirtualKey="VK_F" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 00A4 F000"/>
+<VK_TO_WCHARS Wch="0067 0047 F000 F000 F001 F000" VirtualKey="VK_G" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 00B5 F000"/>
+<VK_TO_WCHARS Wch="0068 0048 F000 F000 F001 F001" VirtualKey="VK_H" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 017F 02CD"/>
+<VK_TO_WCHARS Wch="006A 004A F000 F000 F000 F000" VirtualKey="VK_J" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="006C 004C F000 F000 007C F000" VirtualKey="VK_L" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="006D 004D F000 F000 221E F000" VirtualKey="VK_M" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="002F 005C F000 F000 00F7 221A" VirtualKey="VK_OEM_4"/>
+<VK_TO_WCHARS Wch="002A 00BD 001C F000 00D7 00BC" VirtualKey="VK_OEM_5"/>
+<VK_TO_WCHARS Wch="003C 003E 001C F000 2A7D 2A7E" VirtualKey="VK_OEM_102"/>
+<VK_TO_WCHARS Wch="0077 0057 F000 F000 0292 01B7" VirtualKey="VK_W" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0078 0058 F000 F000 00A9 F000" VirtualKey="VK_X" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="0063 0043 F000 F000 00E7 00C7" VirtualKey="VK_C" Attributes="CAPLOK, CAPLOKALTGR"/>
+<VK_TO_WCHARS Wch="0076 0056 F000 F000 F001 F001" VirtualKey="VK_V" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 00B8 02DB"/>
+<VK_TO_WCHARS Wch="0062 0042 F000 F000 F001 F000" VirtualKey="VK_B" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 002D F000"/>
+<VK_TO_WCHARS Wch="006E 004E F000 F000 F001 F000" VirtualKey="VK_N" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 007E F000"/>
+<VK_TO_WCHARS Wch="002E 003F F000 F000 00BF F000" VirtualKey="VK_OEM_PERIOD"/>
+<VK_TO_WCHARS Wch="002C 0021 F000 F000 00A1 F001" VirtualKey="VK_OEM_COMMA"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 F000 002C"/>
+<VK_TO_WCHARS Wch="003A 2026 F000 F000 00B7 F000" VirtualKey="VK_OEM_2"/>
+<VK_TO_WCHARS Wch="003B 003D F000 F000 2243 2260" VirtualKey="VK_OEM_1"/>
+<VK_TO_WCHARS Wch="0020 0020 F000 F000 00A0 202F" VirtualKey="VK_SPACE"/>
+<VK_TO_WCHARS Wch="0069 0049 F000 F000 F001 F001" VirtualKey="VK_I" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 02D9 002E"/>
+<VK_TO_WCHARS Wch="006B 004B F000 F000 F001 F000" VirtualKey="VK_K" Attributes="CAPLOK"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 002F F000"/>
+<VK_TO_WCHARS Wch="0040 0023 F000 F000 F001 F001" VirtualKey="VK_OEM_3"/>
+<VK_TO_WCHARS Wch="F000 F000 F000 F000 02D8 00B0"/>
+<VK_TO_WCHARS Wch="002C 002C F000 F000 F000 F000" VirtualKey="VK_DECIMAL"/>
+</VkToWchars>
+</VK_TO_WCHAR_TABLE>
+<VK_TO_WCHAR_TABLE Modifications="2" Size="6">
+<VkToWchars>
+<VK_TO_WCHARS Wch="0009 0009" VirtualKey="VK_TAB"/>
+<VK_TO_WCHARS Wch="002B 002B" VirtualKey="VK_ADD"/>
+<VK_TO_WCHARS Wch="002F 002F" VirtualKey="VK_DIVIDE"/>
+<VK_TO_WCHARS Wch="002A 002A" VirtualKey="VK_MULTIPLY"/>
+<VK_TO_WCHARS Wch="002D 002D" VirtualKey="VK_SUBTRACT"/>
+</VkToWchars>
+</VK_TO_WCHAR_TABLE>
+<VK_TO_WCHAR_TABLE Modifications="1" Size="4">
+<VkToWchars>
+<VK_TO_WCHARS Wch="0030" VirtualKey="VK_NUMPAD0"/>
+<VK_TO_WCHARS Wch="0031" VirtualKey="VK_NUMPAD1"/>
+<VK_TO_WCHARS Wch="0032" VirtualKey="VK_NUMPAD2"/>
+<VK_TO_WCHARS Wch="0033" VirtualKey="VK_NUMPAD3"/>
+<VK_TO_WCHARS Wch="0034" VirtualKey="VK_NUMPAD4"/>
+<VK_TO_WCHARS Wch="0035" VirtualKey="VK_NUMPAD5"/>
+<VK_TO_WCHARS Wch="0036" VirtualKey="VK_NUMPAD6"/>
+<VK_TO_WCHARS Wch="0037" VirtualKey="VK_NUMPAD7"/>
+<VK_TO_WCHARS Wch="0038" VirtualKey="VK_NUMPAD8"/>
+<VK_TO_WCHARS Wch="0039" VirtualKey="VK_NUMPAD9"/>
+</VkToWchars>
+</VK_TO_WCHAR_TABLE>
+</VkToWcharTable>
+<DeadKeys>
+<DEADKEY Both="02D80041" Composed="0102"/>
+<DEADKEY Both="02D80045" Composed="0114"/>
+<DEADKEY Both="02D80047" Composed="011E"/>
+<DEADKEY Both="02D80049" Composed="012C"/>
+<DEADKEY Both="02D8004F" Composed="014E"/>
+<DEADKEY Both="02D80055" Composed="016C"/>
+<DEADKEY Both="02D80061" Composed="0103"/>
+<DEADKEY Both="02D80065" Composed="0115"/>
+<DEADKEY Both="02D80067" Composed="011F"/>
+<DEADKEY Both="02D80069" Composed="012D"/>
+<DEADKEY Both="02D8006F" Composed="014F"/>
+<DEADKEY Both="02D80075" Composed="016D"/>
+<DEADKEY Both="02D80020" Composed="02D8"/>
+<DEADKEY Both="02D802D8" Composed="02D8"/>
+<DEADKEY Both="00B00041" Composed="0202"/>
+<DEADKEY Both="00B00045" Composed="0206"/>
+<DEADKEY Both="00B00049" Composed="020A"/>
+<DEADKEY Both="00B0004F" Composed="020E"/>
+<DEADKEY Both="00B00052" Composed="0212"/>
+<DEADKEY Both="00B00055" Composed="0216"/>
+<DEADKEY Both="00B00061" Composed="0203"/>
+<DEADKEY Both="00B00065" Composed="0207"/>
+<DEADKEY Both="00B00069" Composed="020B"/>
+<DEADKEY Both="00B0006F" Composed="020F"/>
+<DEADKEY Both="00B00072" Composed="0213"/>
+<DEADKEY Both="00B00075" Composed="0217"/>
+<DEADKEY Both="00B00020" Composed="00B0"/>
+<DEADKEY Both="00B000B0" Composed="00B0"/>
+<DEADKEY Both="00B40041" Composed="00C1"/>
+<DEADKEY Both="00B40043" Composed="0106"/>
+<DEADKEY Both="00B40045" Composed="00C9"/>
+<DEADKEY Both="00B40047" Composed="01F4"/>
+<DEADKEY Both="00B40049" Composed="00CD"/>
+<DEADKEY Both="00B4004B" Composed="1E30"/>
+<DEADKEY Both="00B4004C" Composed="0139"/>
+<DEADKEY Both="00B4004D" Composed="1E3E"/>
+<DEADKEY Both="00B4004E" Composed="0143"/>
+<DEADKEY Both="00B4004F" Composed="00D3"/>
+<DEADKEY Both="00B40050" Composed="1E54"/>
+<DEADKEY Both="00B40052" Composed="0154"/>
+<DEADKEY Both="00B40053" Composed="015A"/>
+<DEADKEY Both="00B40055" Composed="00DA"/>
+<DEADKEY Both="00B40057" Composed="1E82"/>
+<DEADKEY Both="00B40059" Composed="00DD"/>
+<DEADKEY Both="00B4005A" Composed="0179"/>
+<DEADKEY Both="00B40061" Composed="00E1"/>
+<DEADKEY Both="00B40063" Composed="0107"/>
+<DEADKEY Both="00B40065" Composed="00E9"/>
+<DEADKEY Both="00B40067" Composed="01F5"/>
+<DEADKEY Both="00B40069" Composed="00ED"/>
+<DEADKEY Both="00B4006B" Composed="1E31"/>
+<DEADKEY Both="00B4006C" Composed="013A"/>
+<DEADKEY Both="00B4006D" Composed="1E3F"/>
+<DEADKEY Both="00B4006E" Composed="0144"/>
+<DEADKEY Both="00B4006F" Composed="00F3"/>
+<DEADKEY Both="00B40070" Composed="1E55"/>
+<DEADKEY Both="00B40072" Composed="0155"/>
+<DEADKEY Both="00B40073" Composed="015B"/>
+<DEADKEY Both="00B40075" Composed="00FA"/>
+<DEADKEY Both="00B40077" Composed="1E83"/>
+<DEADKEY Both="00B40079" Composed="00FD"/>
+<DEADKEY Both="00B4007A" Composed="017A"/>
+<DEADKEY Both="00B400C6" Composed="01FC"/>
+<DEADKEY Both="00B400E6" Composed="01FD"/>
+<DEADKEY Both="00B40020" Composed="00B4"/>
+<DEADKEY Both="00B400B4" Composed="00B4"/>
+<DEADKEY Both="00600041" Composed="00C0"/>
+<DEADKEY Both="00600045" Composed="00C8"/>
+<DEADKEY Both="00600049" Composed="00CC"/>
+<DEADKEY Both="0060004E" Composed="01F8"/>
+<DEADKEY Both="0060004F" Composed="00D2"/>
+<DEADKEY Both="00600055" Composed="00D9"/>
+<DEADKEY Both="00600057" Composed="1E80"/>
+<DEADKEY Both="00600059" Composed="1EF2"/>
+<DEADKEY Both="00600061" Composed="00E0"/>
+<DEADKEY Both="00600065" Composed="00E8"/>
+<DEADKEY Both="00600069" Composed="00EC"/>
+<DEADKEY Both="0060006E" Composed="01F9"/>
+<DEADKEY Both="0060006F" Composed="00F2"/>
+<DEADKEY Both="00600075" Composed="00F9"/>
+<DEADKEY Both="00600077" Composed="1E81"/>
+<DEADKEY Both="00600079" Composed="1EF3"/>
+<DEADKEY Both="00600020" Composed="0060"/>
+<DEADKEY Both="00600060" Composed="0060"/>
+<DEADKEY Both="02DD004F" Composed="0150"/>
+<DEADKEY Both="02DD0055" Composed="0170"/>
+<DEADKEY Both="02DD006F" Composed="0151"/>
+<DEADKEY Both="02DD0075" Composed="0171"/>
+<DEADKEY Both="02DD0020" Composed="02DD"/>
+<DEADKEY Both="02DD02DD" Composed="02DD"/>
+<DEADKEY Both="02F50041" Composed="0200"/>
+<DEADKEY Both="02F50045" Composed="0204"/>
+<DEADKEY Both="02F50049" Composed="0208"/>
+<DEADKEY Both="02F5004F" Composed="020C"/>
+<DEADKEY Both="02F50052" Composed="0210"/>
+<DEADKEY Both="02F50055" Composed="0214"/>
+<DEADKEY Both="02F50061" Composed="0201"/>
+<DEADKEY Both="02F50065" Composed="0205"/>
+<DEADKEY Both="02F50069" Composed="0209"/>
+<DEADKEY Both="02F5006F" Composed="020D"/>
+<DEADKEY Both="02F50072" Composed="0211"/>
+<DEADKEY Both="02F50075" Composed="0215"/>
+<DEADKEY Both="02F50020" Composed="02F5"/>
+<DEADKEY Both="02F502F5" Composed="02F5"/>
+<DEADKEY Both="00AF0041" Composed="0100"/>
+<DEADKEY Both="00AF0045" Composed="0112"/>
+<DEADKEY Both="00AF0047" Composed="1E20"/>
+<DEADKEY Both="00AF0049" Composed="012A"/>
+<DEADKEY Both="00AF004F" Composed="014C"/>
+<DEADKEY Both="00AF0055" Composed="016A"/>
+<DEADKEY Both="00AF0059" Composed="0232"/>
+<DEADKEY Both="00AF0061" Composed="0101"/>
+<DEADKEY Both="00AF0065" Composed="0113"/>
+<DEADKEY Both="00AF0067" Composed="1E21"/>
+<DEADKEY Both="00AF0069" Composed="012B"/>
+<DEADKEY Both="00AF006F" Composed="014D"/>
+<DEADKEY Both="00AF0075" Composed="016B"/>
+<DEADKEY Both="00AF0079" Composed="0233"/>
+<DEADKEY Both="00AF00C6" Composed="01E2"/>
+<DEADKEY Both="00AF00E6" Composed="01E3"/>
+<DEADKEY Both="00AF0020" Composed="00AF"/>
+<DEADKEY Both="00AF00AF" Composed="00AF"/>
+<DEADKEY Both="02DA0041" Composed="00C5"/>
+<DEADKEY Both="02DA0055" Composed="016E"/>
+<DEADKEY Both="02DA0061" Composed="00E5"/>
+<DEADKEY Both="02DA0075" Composed="016F"/>
+<DEADKEY Both="02DA0077" Composed="1E98"/>
+<DEADKEY Both="02DA0079" Composed="1E99"/>
+<DEADKEY Both="02DA0020" Composed="02DA"/>
+<DEADKEY Both="02DA02DA" Composed="02DA"/>
+<DEADKEY Both="005E0041" Composed="00C2"/>
+<DEADKEY Both="005E0043" Composed="0108"/>
+<DEADKEY Both="005E0045" Composed="00CA"/>
+<DEADKEY Both="005E0047" Composed="011C"/>
+<DEADKEY Both="005E0048" Composed="0124"/>
+<DEADKEY Both="005E0049" Composed="00CE"/>
+<DEADKEY Both="005E004A" Composed="0134"/>
+<DEADKEY Both="005E004F" Composed="00D4"/>
+<DEADKEY Both="005E0053" Composed="015C"/>
+<DEADKEY Both="005E0055" Composed="00DB"/>
+<DEADKEY Both="005E0057" Composed="0174"/>
+<DEADKEY Both="005E0059" Composed="0176"/>
+<DEADKEY Both="005E005A" Composed="1E90"/>
+<DEADKEY Both="005E0061" Composed="00E2"/>
+<DEADKEY Both="005E0063" Composed="0109"/>
+<DEADKEY Both="005E0065" Composed="00EA"/>
+<DEADKEY Both="005E0067" Composed="011D"/>
+<DEADKEY Both="005E0068" Composed="0125"/>
+<DEADKEY Both="005E0069" Composed="00EE"/>
+<DEADKEY Both="005E006A" Composed="0135"/>
+<DEADKEY Both="005E006F" Composed="00F4"/>
+<DEADKEY Both="005E0073" Composed="015D"/>
+<DEADKEY Both="005E0075" Composed="00FB"/>
+<DEADKEY Both="005E0077" Composed="0175"/>
+<DEADKEY Both="005E0079" Composed="0177"/>
+<DEADKEY Both="005E007A" Composed="1E91"/>
+<DEADKEY Both="005E0030" Composed="2070"/>
+<DEADKEY Both="005E0031" Composed="00B9"/>
+<DEADKEY Both="005E0032" Composed="00B2"/>
+<DEADKEY Both="005E0033" Composed="00B3"/>
+<DEADKEY Both="005E0034" Composed="2074"/>
+<DEADKEY Both="005E0035" Composed="2075"/>
+<DEADKEY Both="005E0036" Composed="2076"/>
+<DEADKEY Both="005E0037" Composed="2077"/>
+<DEADKEY Both="005E0038" Composed="2078"/>
+<DEADKEY Both="005E0039" Composed="2079"/>
+<DEADKEY Both="005E0020" Composed="005E"/>
+<DEADKEY Both="005E005E" Composed="005E"/>
+<DEADKEY Both="00A80041" Composed="00C4"/>
+<DEADKEY Both="00A80045" Composed="00CB"/>
+<DEADKEY Both="00A80048" Composed="1E26"/>
+<DEADKEY Both="00A80049" Composed="00CF"/>
+<DEADKEY Both="00A8004F" Composed="00D6"/>
+<DEADKEY Both="00A80055" Composed="00DC"/>
+<DEADKEY Both="00A80057" Composed="1E84"/>
+<DEADKEY Both="00A80058" Composed="1E8C"/>
+<DEADKEY Both="00A80059" Composed="0178"/>
+<DEADKEY Both="00A80061" Composed="00E4"/>
+<DEADKEY Both="00A80065" Composed="00EB"/>
+<DEADKEY Both="00A80068" Composed="1E27"/>
+<DEADKEY Both="00A80069" Composed="00EF"/>
+<DEADKEY Both="00A8006F" Composed="00F6"/>
+<DEADKEY Both="00A80074" Composed="1E97"/>
+<DEADKEY Both="00A80075" Composed="00FC"/>
+<DEADKEY Both="00A80077" Composed="1E85"/>
+<DEADKEY Both="00A80078" Composed="1E8D"/>
+<DEADKEY Both="00A80079" Composed="00FF"/>
+<DEADKEY Both="00A80020" Composed="00A8"/>
+<DEADKEY Both="00A800A8" Composed="00A8"/>
+<DEADKEY Both="02C70041" Composed="01CD"/>
+<DEADKEY Both="02C70043" Composed="010C"/>
+<DEADKEY Both="02C70044" Composed="010E"/>
+<DEADKEY Both="02C70045" Composed="011A"/>
+<DEADKEY Both="02C70047" Composed="01E6"/>
+<DEADKEY Both="02C70048" Composed="021E"/>
+<DEADKEY Both="02C70049" Composed="01CF"/>
+<DEADKEY Both="02C7004B" Composed="01E8"/>
+<DEADKEY Both="02C7004C" Composed="013D"/>
+<DEADKEY Both="02C7004E" Composed="0147"/>
+<DEADKEY Both="02C7004F" Composed="01D1"/>
+<DEADKEY Both="02C70052" Composed="0158"/>
+<DEADKEY Both="02C70053" Composed="0160"/>
+<DEADKEY Both="02C70054" Composed="0164"/>
+<DEADKEY Both="02C70055" Composed="01D3"/>
+<DEADKEY Both="02C7005A" Composed="017D"/>
+<DEADKEY Both="02C701B7" Composed="01EE"/>
+<DEADKEY Both="02C70061" Composed="01CE"/>
+<DEADKEY Both="02C70063" Composed="010D"/>
+<DEADKEY Both="02C70064" Composed="010F"/>
+<DEADKEY Both="02C70065" Composed="011B"/>
+<DEADKEY Both="02C70067" Composed="01E7"/>
+<DEADKEY Both="02C70068" Composed="021F"/>
+<DEADKEY Both="02C70069" Composed="01D0"/>
+<DEADKEY Both="02C7006A" Composed="01F0"/>
+<DEADKEY Both="02C7006B" Composed="01E9"/>
+<DEADKEY Both="02C7006C" Composed="013E"/>
+<DEADKEY Both="02C7006E" Composed="0148"/>
+<DEADKEY Both="02C7006F" Composed="01D2"/>
+<DEADKEY Both="02C70072" Composed="0159"/>
+<DEADKEY Both="02C70073" Composed="0161"/>
+<DEADKEY Both="02C70074" Composed="0165"/>
+<DEADKEY Both="02C70075" Composed="01D4"/>
+<DEADKEY Both="02C7007A" Composed="017E"/>
+<DEADKEY Both="02C70292" Composed="01EF"/>
+<DEADKEY Both="02C70030" Composed="2080"/>
+<DEADKEY Both="02C70031" Composed="2081"/>
+<DEADKEY Both="02C70032" Composed="2082"/>
+<DEADKEY Both="02C70033" Composed="2083"/>
+<DEADKEY Both="02C70034" Composed="2084"/>
+<DEADKEY Both="02C70035" Composed="2085"/>
+<DEADKEY Both="02C70036" Composed="2086"/>
+<DEADKEY Both="02C70037" Composed="2087"/>
+<DEADKEY Both="02C70038" Composed="2088"/>
+<DEADKEY Both="02C70039" Composed="2089"/>
+<DEADKEY Both="02C70020" Composed="02C7"/>
+<DEADKEY Both="02C702C7" Composed="02C7"/>
+<DEADKEY Both="02D90041" Composed="0226"/>
+<DEADKEY Both="02D90042" Composed="1E02"/>
+<DEADKEY Both="02D90043" Composed="010A"/>
+<DEADKEY Both="02D90044" Composed="1E0A"/>
+<DEADKEY Both="02D90045" Composed="0116"/>
+<DEADKEY Both="02D90046" Composed="1E1E"/>
+<DEADKEY Both="02D90047" Composed="0120"/>
+<DEADKEY Both="02D90048" Composed="1E22"/>
+<DEADKEY Both="02D90049" Composed="0130"/>
+<DEADKEY Both="02D9004C" Composed="013F"/>
+<DEADKEY Both="02D9004D" Composed="1E40"/>
+<DEADKEY Both="02D9004E" Composed="1E44"/>
+<DEADKEY Both="02D9004F" Composed="022E"/>
+<DEADKEY Both="02D90050" Composed="1E56"/>
+<DEADKEY Both="02D90052" Composed="1E58"/>
+<DEADKEY Both="02D90053" Composed="1E60"/>
+<DEADKEY Both="02D90054" Composed="1E6A"/>
+<DEADKEY Both="02D90057" Composed="1E86"/>
+<DEADKEY Both="02D90058" Composed="1E8A"/>
+<DEADKEY Both="02D90059" Composed="1E8E"/>
+<DEADKEY Both="02D9005A" Composed="017B"/>
+<DEADKEY Both="02D90061" Composed="0227"/>
+<DEADKEY Both="02D90062" Composed="1E03"/>
+<DEADKEY Both="02D90063" Composed="010B"/>
+<DEADKEY Both="02D90064" Composed="1E0B"/>
+<DEADKEY Both="02D90065" Composed="0117"/>
+<DEADKEY Both="02D90066" Composed="1E1F"/>
+<DEADKEY Both="02D90067" Composed="0121"/>
+<DEADKEY Both="02D90068" Composed="1E23"/>
+<DEADKEY Both="02D90069" Composed="0131"/>
+<DEADKEY Both="02D9006C" Composed="0140"/>
+<DEADKEY Both="02D9006D" Composed="1E41"/>
+<DEADKEY Both="02D9006E" Composed="1E45"/>
+<DEADKEY Both="02D9006F" Composed="022F"/>
+<DEADKEY Both="02D90070" Composed="1E57"/>
+<DEADKEY Both="02D90072" Composed="1E59"/>
+<DEADKEY Both="02D90073" Composed="1E61"/>
+<DEADKEY Both="02D90074" Composed="1E6B"/>
+<DEADKEY Both="02D90077" Composed="1E87"/>
+<DEADKEY Both="02D90078" Composed="1E8B"/>
+<DEADKEY Both="02D90079" Composed="1E8F"/>
+<DEADKEY Both="02D9007A" Composed="017C"/>
+<DEADKEY Both="02D9017F" Composed="1E9B"/>
+<DEADKEY Both="02D90020" Composed="02D9"/>
+<DEADKEY Both="02D902D9" Composed="02D9"/>
+<DEADKEY Both="002E0041" Composed="1EA0"/>
+<DEADKEY Both="002E0042" Composed="1E04"/>
+<DEADKEY Both="002E0044" Composed="1E0C"/>
+<DEADKEY Both="002E0045" Composed="1EB8"/>
+<DEADKEY Both="002E0048" Composed="1E24"/>
+<DEADKEY Both="002E0049" Composed="1ECA"/>
+<DEADKEY Both="002E004B" Composed="1E32"/>
+<DEADKEY Both="002E004C" Composed="1E36"/>
+<DEADKEY Both="002E004D" Composed="1E42"/>
+<DEADKEY Both="002E004E" Composed="1E46"/>
+<DEADKEY Both="002E004F" Composed="1ECC"/>
+<DEADKEY Both="002E0052" Composed="1E5A"/>
+<DEADKEY Both="002E0053" Composed="1E62"/>
+<DEADKEY Both="002E0054" Composed="1E6C"/>
+<DEADKEY Both="002E0055" Composed="1EE4"/>
+<DEADKEY Both="002E0056" Composed="1E7E"/>
+<DEADKEY Both="002E0057" Composed="1E88"/>
+<DEADKEY Both="002E0059" Composed="1EF4"/>
+<DEADKEY Both="002E005A" Composed="1E92"/>
+<DEADKEY Both="002E0061" Composed="1EA1"/>
+<DEADKEY Both="002E0062" Composed="1E05"/>
+<DEADKEY Both="002E0064" Composed="1E0D"/>
+<DEADKEY Both="002E0065" Composed="1EB9"/>
+<DEADKEY Both="002E0068" Composed="1E25"/>
+<DEADKEY Both="002E0069" Composed="1ECB"/>
+<DEADKEY Both="002E006B" Composed="1E33"/>
+<DEADKEY Both="002E006C" Composed="1E37"/>
+<DEADKEY Both="002E006D" Composed="1E43"/>
+<DEADKEY Both="002E006E" Composed="1E47"/>
+<DEADKEY Both="002E006F" Composed="1ECD"/>
+<DEADKEY Both="002E0072" Composed="1E5B"/>
+<DEADKEY Both="002E0073" Composed="1E63"/>
+<DEADKEY Both="002E0074" Composed="1E6D"/>
+<DEADKEY Both="002E0075" Composed="1EE5"/>
+<DEADKEY Both="002E0076" Composed="1E7F"/>
+<DEADKEY Both="002E0077" Composed="1E89"/>
+<DEADKEY Both="002E0079" Composed="1EF5"/>
+<DEADKEY Both="002E007A" Composed="1E93"/>
+<DEADKEY Both="002E0020" Composed="002E"/>
+<DEADKEY Both="002E002E" Composed="002E"/>
+<DEADKEY Both="00A40041" Composed="20B3"/>
+<DEADKEY Both="00A40042" Composed="0E3F"/>
+<DEADKEY Both="00A40043" Composed="20B5"/>
+<DEADKEY Both="00A40044" Composed="20AF"/>
+<DEADKEY Both="00A40046" Composed="20A3"/>
+<DEADKEY Both="00A4004C" Composed="20A4"/>
+<DEADKEY Both="00A4004D" Composed="2133"/>
+<DEADKEY Both="00A40050" Composed="20A7"/>
+<DEADKEY Both="00A40052" Composed="20B9"/>
+<DEADKEY Both="00A40053" Composed="20B7"/>
+<DEADKEY Both="00A40054" Composed="20AE"/>
+<DEADKEY Both="00A40062" Composed="20BF"/>
+<DEADKEY Both="00A40063" Composed="00A2"/>
+<DEADKEY Both="00A40064" Composed="20AB"/>
+<DEADKEY Both="00A40065" Composed="20A0"/>
+<DEADKEY Both="00A40066" Composed="0192"/>
+<DEADKEY Both="00A40067" Composed="20B2"/>
+<DEADKEY Both="00A40068" Composed="20B4"/>
+<DEADKEY Both="00A4006B" Composed="20AD"/>
+<DEADKEY Both="00A4006C" Composed="20BA"/>
+<DEADKEY Both="00A4006D" Composed="20A5"/>
+<DEADKEY Both="00A4006E" Composed="20A6"/>
+<DEADKEY Both="00A40070" Composed="20B1"/>
+<DEADKEY Both="00A40072" Composed="20BD"/>
+<DEADKEY Both="00A40073" Composed="20AA"/>
+<DEADKEY Both="00A40074" Composed="20B8"/>
+<DEADKEY Both="00A40077" Composed="20A9"/>
+<DEADKEY Both="00A40079" Composed="00A5"/>
+<DEADKEY Both="00A4007C" Composed="20BE"/>
+<DEADKEY Both="00A40025" Composed="20B0"/>
+<DEADKEY Both="00A400AE" Composed="20A8"/>
+<DEADKEY Both="00A400C7" Composed="20A1"/>
+<DEADKEY Both="00A400E7" Composed="20A2"/>
+<DEADKEY Both="00A4221E" Composed="20BC"/>
+<DEADKEY Both="00A40020" Composed="00A4"/>
+<DEADKEY Both="00A400A4" Composed="00A4"/>
+<DEADKEY Both="00B50041" Composed="0391"/>
+<DEADKEY Both="00B50042" Composed="0392"/>
+<DEADKEY Both="00B50043" Composed="03A8"/>
+<DEADKEY Both="00B50044" Composed="0394"/>
+<DEADKEY Both="00B50045" Composed="0395"/>
+<DEADKEY Both="00B50046" Composed="03A6"/>
+<DEADKEY Both="00B50047" Composed="0393"/>
+<DEADKEY Both="00B50048" Composed="0397"/>
+<DEADKEY Both="00B50049" Composed="0399"/>
+<DEADKEY Both="00B5004A" Composed="039E"/>
+<DEADKEY Both="00B5004B" Composed="039A"/>
+<DEADKEY Both="00B5004C" Composed="039B"/>
+<DEADKEY Both="00B5004D" Composed="039C"/>
+<DEADKEY Both="00B5004E" Composed="039D"/>
+<DEADKEY Both="00B5004F" Composed="039F"/>
+<DEADKEY Both="00B50050" Composed="03A0"/>
+<DEADKEY Both="00B50052" Composed="03A1"/>
+<DEADKEY Both="00B50053" Composed="03A3"/>
+<DEADKEY Both="00B50054" Composed="03A4"/>
+<DEADKEY Both="00B50055" Composed="0398"/>
+<DEADKEY Both="00B50056" Composed="03A9"/>
+<DEADKEY Both="00B50058" Composed="03A7"/>
+<DEADKEY Both="00B50059" Composed="03A5"/>
+<DEADKEY Both="00B5005A" Composed="0396"/>
+<DEADKEY Both="00B50061" Composed="03B1"/>
+<DEADKEY Both="00B50062" Composed="03B2"/>
+<DEADKEY Both="00B50063" Composed="03C8"/>
+<DEADKEY Both="00B50064" Composed="03B4"/>
+<DEADKEY Both="00B50065" Composed="03B5"/>
+<DEADKEY Both="00B50066" Composed="03C6"/>
+<DEADKEY Both="00B50067" Composed="03B3"/>
+<DEADKEY Both="00B50068" Composed="03B7"/>
+<DEADKEY Both="00B50069" Composed="03B9"/>
+<DEADKEY Both="00B5006A" Composed="03BE"/>
+<DEADKEY Both="00B5006B" Composed="03BA"/>
+<DEADKEY Both="00B5006C" Composed="03BB"/>
+<DEADKEY Both="00B5006D" Composed="03BC"/>
+<DEADKEY Both="00B5006E" Composed="03BD"/>
+<DEADKEY Both="00B5006F" Composed="03BF"/>
+<DEADKEY Both="00B50070" Composed="03C0"/>
+<DEADKEY Both="00B50072" Composed="03C1"/>
+<DEADKEY Both="00B50073" Composed="03C3"/>
+<DEADKEY Both="00B50074" Composed="03C4"/>
+<DEADKEY Both="00B50075" Composed="03B8"/>
+<DEADKEY Both="00B50076" Composed="03C9"/>
+<DEADKEY Both="00B50077" Composed="03C2"/>
+<DEADKEY Both="00B50078" Composed="03C7"/>
+<DEADKEY Both="00B50079" Composed="03C5"/>
+<DEADKEY Both="00B5007A" Composed="03B6"/>
+<DEADKEY Both="00B50020" Composed="00B5"/>
+<DEADKEY Both="00B500B5" Composed="00B5"/>
+<DEADKEY Both="017F0027" Composed="02BC"/>
+<DEADKEY Both="017F0030" Composed="00AB"/>
+<DEADKEY Both="017F0037" Composed="203A"/>
+<DEADKEY Both="017F0038" Composed="2039"/>
+<DEADKEY Both="017F0039" Composed="00BB"/>
+<DEADKEY Both="017F003C" Composed="2264"/>
+<DEADKEY Both="017F003E" Composed="2265"/>
+<DEADKEY Both="017F0044" Composed="00D0"/>
+<DEADKEY Both="017F0045" Composed="018F"/>
+<DEADKEY Both="017F0047" Composed="014A"/>
+<DEADKEY Both="017F0049" Composed="0130"/>
+<DEADKEY Both="017F004A" Composed="0132"/>
+<DEADKEY Both="017F0054" Composed="00DE"/>
+<DEADKEY Both="017F0061" Composed="00AA"/>
+<DEADKEY Both="017F0064" Composed="00F0"/>
+<DEADKEY Both="017F0065" Composed="0259"/>
+<DEADKEY Both="017F0067" Composed="014B"/>
+<DEADKEY Both="017F0069" Composed="0131"/>
+<DEADKEY Both="017F006A" Composed="0133"/>
+<DEADKEY Both="017F006F" Composed="00BA"/>
+<DEADKEY Both="017F0073" Composed="017F"/>
+<DEADKEY Both="017F0074" Composed="00FE"/>
+<DEADKEY Both="017F00A0" Composed="2003"/>
+<DEADKEY Both="017F2018" Composed="201A"/>
+<DEADKEY Both="017F2019" Composed="2018"/>
+<DEADKEY Both="017F00AB" Composed="201E"/>
+<DEADKEY Both="017F00BB" Composed="201C"/>
+<DEADKEY Both="017F0020" Composed="017F"/>
+<DEADKEY Both="017F017F" Composed="017F"/>
+<DEADKEY Both="02CD0042" Composed="1E06"/>
+<DEADKEY Both="02CD0044" Composed="1E0E"/>
+<DEADKEY Both="02CD004B" Composed="1E34"/>
+<DEADKEY Both="02CD004C" Composed="1E3A"/>
+<DEADKEY Both="02CD004E" Composed="1E48"/>
+<DEADKEY Both="02CD0052" Composed="1E5E"/>
+<DEADKEY Both="02CD0054" Composed="1E6E"/>
+<DEADKEY Both="02CD005A" Composed="1E94"/>
+<DEADKEY Both="02CD0062" Composed="1E07"/>
+<DEADKEY Both="02CD0064" Composed="1E0F"/>
+<DEADKEY Both="02CD0068" Composed="1E96"/>
+<DEADKEY Both="02CD006B" Composed="1E35"/>
+<DEADKEY Both="02CD006C" Composed="1E3B"/>
+<DEADKEY Both="02CD006E" Composed="1E49"/>
+<DEADKEY Both="02CD0072" Composed="1E5F"/>
+<DEADKEY Both="02CD0074" Composed="1E6F"/>
+<DEADKEY Both="02CD007A" Composed="1E95"/>
+<DEADKEY Both="02CD0020" Composed="02CD"/>
+<DEADKEY Both="02CD02CD" Composed="02CD"/>
+<DEADKEY Both="002F0041" Composed="023A"/>
+<DEADKEY Both="002F0043" Composed="023B"/>
+<DEADKEY Both="002F0045" Composed="0246"/>
+<DEADKEY Both="002F004C" Composed="0141"/>
+<DEADKEY Both="002F004F" Composed="00D8"/>
+<DEADKEY Both="002F0054" Composed="023E"/>
+<DEADKEY Both="002F0063" Composed="023C"/>
+<DEADKEY Both="002F0065" Composed="0247"/>
+<DEADKEY Both="002F006C" Composed="0142"/>
+<DEADKEY Both="002F006F" Composed="00F8"/>
+<DEADKEY Both="002F017F" Composed="1E9C"/>
+<DEADKEY Both="002F003D" Composed="2260"/>
+<DEADKEY Both="002F2243" Composed="2244"/>
+<DEADKEY Both="002F003C" Composed="226E"/>
+<DEADKEY Both="002F003E" Composed="226F"/>
+<DEADKEY Both="002F2A7D" Composed="2270"/>
+<DEADKEY Both="002F2A7E" Composed="2271"/>
+<DEADKEY Both="002F0020" Composed="002F"/>
+<DEADKEY Both="002F002F" Composed="002F"/>
+<DEADKEY Both="00B80043" Composed="00C7"/>
+<DEADKEY Both="00B80044" Composed="1E10"/>
+<DEADKEY Both="00B80045" Composed="0228"/>
+<DEADKEY Both="00B80047" Composed="0122"/>
+<DEADKEY Both="00B80048" Composed="1E28"/>
+<DEADKEY Both="00B8004B" Composed="0136"/>
+<DEADKEY Both="00B8004C" Composed="013B"/>
+<DEADKEY Both="00B8004E" Composed="0145"/>
+<DEADKEY Both="00B80052" Composed="0156"/>
+<DEADKEY Both="00B80053" Composed="015E"/>
+<DEADKEY Both="00B80054" Composed="0162"/>
+<DEADKEY Both="00B80063" Composed="00E7"/>
+<DEADKEY Both="00B80064" Composed="1E11"/>
+<DEADKEY Both="00B80065" Composed="0229"/>
+<DEADKEY Both="00B80067" Composed="0123"/>
+<DEADKEY Both="00B80068" Composed="1E29"/>
+<DEADKEY Both="00B8006B" Composed="0137"/>
+<DEADKEY Both="00B8006C" Composed="013C"/>
+<DEADKEY Both="00B8006E" Composed="0146"/>
+<DEADKEY Both="00B80072" Composed="0157"/>
+<DEADKEY Both="00B80073" Composed="015F"/>
+<DEADKEY Both="00B80074" Composed="0163"/>
+<DEADKEY Both="00B80020" Composed="00B8"/>
+<DEADKEY Both="00B800B8" Composed="00B8"/>
+<DEADKEY Both="02DB0041" Composed="0104"/>
+<DEADKEY Both="02DB0045" Composed="0118"/>
+<DEADKEY Both="02DB0049" Composed="012E"/>
+<DEADKEY Both="02DB004F" Composed="01EA"/>
+<DEADKEY Both="02DB0055" Composed="0172"/>
+<DEADKEY Both="02DB0061" Composed="0105"/>
+<DEADKEY Both="02DB0065" Composed="0119"/>
+<DEADKEY Both="02DB0069" Composed="012F"/>
+<DEADKEY Both="02DB006F" Composed="01EB"/>
+<DEADKEY Both="02DB0075" Composed="0173"/>
+<DEADKEY Both="02DB0020" Composed="02DB"/>
+<DEADKEY Both="02DB02DB" Composed="02DB"/>
+<DEADKEY Both="002D0042" Composed="0243"/>
+<DEADKEY Both="002D0044" Composed="0110"/>
+<DEADKEY Both="002D0047" Composed="01E4"/>
+<DEADKEY Both="002D0048" Composed="0126"/>
+<DEADKEY Both="002D0049" Composed="0197"/>
+<DEADKEY Both="002D004A" Composed="0248"/>
+<DEADKEY Both="002D004C" Composed="023D"/>
+<DEADKEY Both="002D0052" Composed="024C"/>
+<DEADKEY Both="002D0054" Composed="0166"/>
+<DEADKEY Both="002D0055" Composed="0244"/>
+<DEADKEY Both="002D0059" Composed="024E"/>
+<DEADKEY Both="002D005A" Composed="01B5"/>
+<DEADKEY Both="002D0062" Composed="0180"/>
+<DEADKEY Both="002D0064" Composed="0111"/>
+<DEADKEY Both="002D0067" Composed="01E5"/>
+<DEADKEY Both="002D0068" Composed="0127"/>
+<DEADKEY Both="002D006A" Composed="0249"/>
+<DEADKEY Both="002D006C" Composed="019A"/>
+<DEADKEY Both="002D0072" Composed="024D"/>
+<DEADKEY Both="002D0074" Composed="0167"/>
+<DEADKEY Both="002D0079" Composed="024F"/>
+<DEADKEY Both="002D007A" Composed="01B6"/>
+<DEADKEY Both="002D0020" Composed="002D"/>
+<DEADKEY Both="002D002D" Composed="002D"/>
+<DEADKEY Both="007E0041" Composed="00C3"/>
+<DEADKEY Both="007E0045" Composed="1EBC"/>
+<DEADKEY Both="007E0049" Composed="0128"/>
+<DEADKEY Both="007E004E" Composed="00D1"/>
+<DEADKEY Both="007E004F" Composed="00D5"/>
+<DEADKEY Both="007E0055" Composed="0168"/>
+<DEADKEY Both="007E0056" Composed="1E7C"/>
+<DEADKEY Both="007E0059" Composed="1EF8"/>
+<DEADKEY Both="007E0061" Composed="00E3"/>
+<DEADKEY Both="007E0065" Composed="1EBD"/>
+<DEADKEY Both="007E0069" Composed="0129"/>
+<DEADKEY Both="007E006E" Composed="00F1"/>
+<DEADKEY Both="007E006F" Composed="00F5"/>
+<DEADKEY Both="007E0075" Composed="0169"/>
+<DEADKEY Both="007E0076" Composed="1E7D"/>
+<DEADKEY Both="007E0079" Composed="1EF9"/>
+<DEADKEY Both="007E002D" Composed="2243"/>
+<DEADKEY Both="007E003D" Composed="2248"/>
+<DEADKEY Both="007E003C" Composed="2272"/>
+<DEADKEY Both="007E003E" Composed="2273"/>
+<DEADKEY Both="007E0020" Composed="007E"/>
+<DEADKEY Both="007E007E" Composed="007E"/>
+<DEADKEY Both="002C0053" Composed="0218"/>
+<DEADKEY Both="002C0054" Composed="021A"/>
+<DEADKEY Both="002C0073" Composed="0219"/>
+<DEADKEY Both="002C0074" Composed="021B"/>
+<DEADKEY Both="002C0020" Composed="002C"/>
+<DEADKEY Both="002C002C" Composed="002C"/>
+</DeadKeys>
+<KeyNames>
+<VSC_STRING Vsc="01" Name="Ã‰chap"/>
+<VSC_STRING Vsc="0E" Name="Retour arriÃ¨re"/>
+<VSC_STRING Vsc="0F" Name="Tab"/>
+<VSC_STRING Vsc="1C" Name="EntrÃ©e"/>
+<VSC_STRING Vsc="1D" Name="Ctrl"/>
+<VSC_STRING Vsc="2A" Name="Maj"/>
+<VSC_STRING Vsc="36" Name="Maj droite"/>
+<VSC_STRING Vsc="37" Name="* (PavÃ© num.)"/>
+<VSC_STRING Vsc="38" Name="Alt"/>
+<VSC_STRING Vsc="39" Name="Ã‰chap"/>
+<VSC_STRING Vsc="3A" Name="Verr Maj"/>
+<VSC_STRING Vsc="3B" Name="F1"/>
+<VSC_STRING Vsc="3C" Name="F2"/>
+<VSC_STRING Vsc="3D" Name="F3"/>
+<VSC_STRING Vsc="3E" Name="F4"/>
+<VSC_STRING Vsc="3F" Name="F5"/>
+<VSC_STRING Vsc="40" Name="F6"/>
+<VSC_STRING Vsc="41" Name="F7"/>
+<VSC_STRING Vsc="42" Name="F8"/>
+<VSC_STRING Vsc="43" Name="F9"/>
+<VSC_STRING Vsc="44" Name="F10"/>
+<VSC_STRING Vsc="45" Name="Pause"/>
+<VSC_STRING Vsc="46" Name="ArrÃªt dÃ©fil"/>
+<VSC_STRING Vsc="47" Name="7 (PavÃ© num.)"/>
+<VSC_STRING Vsc="48" Name="8 (PavÃ© num.)"/>
+<VSC_STRING Vsc="49" Name="9 (PavÃ© num.)"/>
+<VSC_STRING Vsc="4A" Name="- (PavÃ© num.)"/>
+<VSC_STRING Vsc="4B" Name="4 (PavÃ© num.)"/>
+<VSC_STRING Vsc="4C" Name="5 (PavÃ© num.)"/>
+<VSC_STRING Vsc="4D" Name="6 (PavÃ© num.)"/>
+<VSC_STRING Vsc="4E" Name="+ (PavÃ© num.)"/>
+<VSC_STRING Vsc="4F" Name="1 (PavÃ© num.)"/>
+<VSC_STRING Vsc="50" Name="2 (PavÃ© num.)"/>
+<VSC_STRING Vsc="51" Name="3 (PavÃ© num.)"/>
+<VSC_STRING Vsc="52" Name="0 (PavÃ© num.)"/>
+<VSC_STRING Vsc="53" Name=", (PavÃ© num.)"/>
+<VSC_STRING Vsc="57" Name="F11"/>
+<VSC_STRING Vsc="58" Name="F12"/>
+</KeyNames>
+<KeyNamesExt>
+<VSC_STRING Vsc="1C" Name="EntrÃ©e (PavÃ© num.)"/>
+<VSC_STRING Vsc="1D" Name="Ctrl droite"/>
+<VSC_STRING Vsc="35" Name="/ (PavÃ© num.)"/>
+<VSC_STRING Vsc="37" Name="Impr Ã©cran"/>
+<VSC_STRING Vsc="38" Name="Alt Gr"/>
+<VSC_STRING Vsc="45" Name="Verr Num"/>
+<VSC_STRING Vsc="46" Name="Attn"/>
+<VSC_STRING Vsc="47" Name="Origine"/>
+<VSC_STRING Vsc="48" Name="Haut"/>
+<VSC_STRING Vsc="49" Name="Page prÃ©c"/>
+<VSC_STRING Vsc="4B" Name="Gauche"/>
+<VSC_STRING Vsc="4D" Name="Droite"/>
+<VSC_STRING Vsc="4F" Name="Fin"/>
+<VSC_STRING Vsc="50" Name="Bas"/>
+<VSC_STRING Vsc="51" Name="Page suiv"/>
+<VSC_STRING Vsc="52" Name="Insert"/>
+<VSC_STRING Vsc="53" Name="Suppr"/>
+<VSC_STRING Vsc="54" Name="<00>"/>
+<VSC_STRING Vsc="56" Name="Aide"/>
+<VSC_STRING Vsc="5B" Name="Windows gauche"/>
+<VSC_STRING Vsc="5C" Name="Windows droite"/>
+<VSC_STRING Vsc="5D" Name="Application"/>
+</KeyNamesExt>
+<KeyNamesDead>
+<DEADKEY_STRING Key="02D8" Name="BrÃ¨ve"/>
+<DEADKEY_STRING Key="00B0" Name="BrÃ¨ve renversÃ©e"/>
+<DEADKEY_STRING Key="00B4" Name="Accent aigu"/>
+<DEADKEY_STRING Key="0060" Name="Accent grave"/>
+<DEADKEY_STRING Key="02DD" Name="Accent double aigu"/>
+<DEADKEY_STRING Key="02F5" Name="Accent double grave"/>
+<DEADKEY_STRING Key="00AF" Name="Macron"/>
+<DEADKEY_STRING Key="02DA" Name="Rond en chef"/>
+<DEADKEY_STRING Key="005E" Name="Accent circonflexe"/>
+<DEADKEY_STRING Key="00A8" Name="TrÃ©ma"/>
+<DEADKEY_STRING Key="02C7" Name="Caron"/>
+<DEADKEY_STRING Key="02D9" Name="Point en chef"/>
+<DEADKEY_STRING Key="002E" Name="Point souscrit"/>
+<DEADKEY_STRING Key="00A4" Name="Symboles monÃ©taires"/>
+<DEADKEY_STRING Key="00B5" Name="Lettres grecques"/>
+<DEADKEY_STRING Key="017F" Name="CaractÃ¨res europÃ©ens additionnels"/>
+<DEADKEY_STRING Key="02CD" Name="Macron souscrit"/>
+<DEADKEY_STRING Key="002F" Name="Barre oblique couvrante"/>
+<DEADKEY_STRING Key="00B8" Name="CÃ©dille"/>
+<DEADKEY_STRING Key="02DB" Name="Ogonek"/>
+<DEADKEY_STRING Key="002D" Name="Barre couvrante"/>
+<DEADKEY_STRING Key="007E" Name="Tilde"/>
+<DEADKEY_STRING Key="002C" Name="Virgule souscrite"/>
+</KeyNamesDead>
+<VSCtoVK>00FF 001B 0031 0032 0033 0034 0035 0036 0037 0038 0039 0030 00DE 00DD 0008 0009 0041 005A 0045 0052 0054 0059 0055 0049 004F 0050 00BD 00BB 000D 00A2 0051 0053 0044 0046 0047 0048 004A 004B 004C 004D 00DB 00C0 00A0 00DC 0057 0058 0043 0056 0042 004E 00BE 00BC 00BF 00BA 01A1 026A 00A4 0020 0014 0070 0071 0072 0073 0074 0075 0076 0077 0078 0079 0390 0291 0C24 0C26 0C21 006D 0C25 0C0C 0C27 006B 0C23 0C28 0C22 0C2D 0C2E 002C 00FF 00E2 007A 007B 000C 00EE 00F1 00EA 00F9 00F5 00F3 00FF 00FF 00FB 002F 007C 007D 007E 007F 0080 0081 0082 0083 0084 0085 0086 00ED 00FF 00E9 00FF 00C1 00FF 00FF 0087 00FF 00FF 00FF 00FF 00EB 0009 00FF 00C2</VSCtoVK>
+<VSCtoVK_E0>
+<VSC_VK Vsc="10" Vk="01B1"/>
+<VSC_VK Vsc="19" Vk="01B0"/>
+<VSC_VK Vsc="1D" Vk="01A3"/>
+<VSC_VK Vsc="20" Vk="01AD"/>
+<VSC_VK Vsc="21" Vk="01B7"/>
+<VSC_VK Vsc="22" Vk="01B3"/>
+<VSC_VK Vsc="24" Vk="01B2"/>
+<VSC_VK Vsc="2E" Vk="01AE"/>
+<VSC_VK Vsc="30" Vk="01AF"/>
+<VSC_VK Vsc="32" Vk="01AC"/>
+<VSC_VK Vsc="35" Vk="016F"/>
+<VSC_VK Vsc="37" Vk="012C"/>
+<VSC_VK Vsc="38" Vk="01A5"/>
+<VSC_VK Vsc="47" Vk="0124"/>
+<VSC_VK Vsc="48" Vk="0126"/>
+<VSC_VK Vsc="49" Vk="0121"/>
+<VSC_VK Vsc="4B" Vk="0125"/>
+<VSC_VK Vsc="4D" Vk="0127"/>
+<VSC_VK Vsc="4F" Vk="0123"/>
+<VSC_VK Vsc="50" Vk="0128"/>
+<VSC_VK Vsc="51" Vk="0122"/>
+<VSC_VK Vsc="52" Vk="012D"/>
+<VSC_VK Vsc="53" Vk="012E"/>
+<VSC_VK Vsc="5B" Vk="015B"/>
+<VSC_VK Vsc="5C" Vk="015C"/>
+<VSC_VK Vsc="5D" Vk="015D"/>
+<VSC_VK Vsc="5F" Vk="015F"/>
+<VSC_VK Vsc="65" Vk="01AA"/>
+<VSC_VK Vsc="66" Vk="01AB"/>
+<VSC_VK Vsc="67" Vk="01A8"/>
+<VSC_VK Vsc="68" Vk="01A9"/>
+<VSC_VK Vsc="69" Vk="01A7"/>
+<VSC_VK Vsc="6A" Vk="01A6"/>
+<VSC_VK Vsc="6B" Vk="01B6"/>
+<VSC_VK Vsc="6C" Vk="01B4"/>
+<VSC_VK Vsc="6D" Vk="01B5"/>
+<VSC_VK Vsc="1C" Vk="010D"/>
+<VSC_VK Vsc="46" Vk="0103"/>
+</VSCtoVK_E0>
+<VSCtoVK_E1>
+<VSC_VK Vsc="1D" Vk="0013"/>
+</VSCtoVK_E1>
+<Ligatures/>
+</KbdLayer>
+</KbdLayerDescriptor>
+<KbdLayerMultiDescriptor/>
+<KbdNlsLayerDescriptor/>
+</KbdDll>
