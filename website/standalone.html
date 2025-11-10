@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - QWERTY/AZERTY Compatible</title>
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.subtitle-small {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #764ba2;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Info Box */
+.info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.info-box p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-box strong {
+    color: #667eea;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    border: none;
+}
+
+/* Buttons */
+.primary-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.icon-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.icon-btn:hover:not(:disabled) {
+    background: #764ba2;
+}
+
+.icon-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Password Display */
+.password-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#password-output {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    background: #f9f9f9;
+}
+
+#password-output:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Entropy Info */
+.entropy-info {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Strength Bar */
+.strength-bar-container {
+    width: 100%;
+    height: 25px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    border-radius: 12px;
+}
+
+.strength-text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Character Preview */
+.character-preview {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.char-display {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    word-wrap: break-word;
+    color: #333;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+.char-display.empty {
+    color: #999;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: #f5f5f5;
+    padding: 30px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer h3 {
+    color: #667eea;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+footer h3:first-child {
+    margin-top: 0;
+}
+
+footer p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+footer strong {
+    color: #333;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.sources-list li {
+    margin: 12px 0;
+    padding-left: 0;
+}
+
+.sources-list a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sources-list a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #323232;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .password-display {
+        flex-direction: column;
+    }
+
+    .icon-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Password Generator</h1>
+            <p class="subtitle">Cross-Layout Compatible (QWERTY & AZERTY)</p>
+            <p class="subtitle-small">Only uses characters in the same position on both keyboards</p>
+        </header>
+
+        <main>
+            <section class="config-section">
+                <h2>Configuration</h2>
+
+                <div class="info-box">
+                    <p><strong>Cross-Layout Compatibility:</strong> This generator only uses characters at the SAME PHYSICAL KEY POSITION on both QWERTY and AZERTY keyboards.</p>
+                    <p><strong>Available:</strong> 21 letters (bcdefghijklnoprstuvxy) in lowercase and uppercase</p>
+                    <p><strong>Not available:</strong> Letters a,m,q,w,z (different physical positions), all numbers 0-9, and all special characters</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-length">Password Length: <span id="length-value">16</span></label>
+                    <input type="range" id="password-length" min="4" max="128" value="16">
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-lowercase" checked>
+                        Lowercase Letters (bcdefghijklnoprstuvxy) - 21 characters
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="include-uppercase" checked>
+                        Uppercase Letters (BCDEFGHIJKLNOPRSTUVXY) - 21 characters
+                    </label>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">Generate Password</button>
+            </section>
+
+            <section class="result-section">
+                <h2>Generated Password</h2>
+
+                <div class="password-display">
+                    <input type="text" id="password-output" readonly placeholder="Click 'Generate Password' to create a password">
+                    <button id="copy-btn" class="icon-btn" title="Copy to clipboard" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="entropy-info">
+                    <h3>Password Strength</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Character Pool Size:</span>
+                        <span id="pool-size" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Password Length:</span>
+                        <span id="actual-length" class="stat-value">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Entropy:</span>
+                        <span id="entropy-value" class="stat-value">-</span>
+                    </div>
+                    <div class="strength-bar-container">
+                        <div id="strength-bar" class="strength-bar"></div>
+                    </div>
+                    <p id="strength-text" class="strength-text"></p>
+                </div>
+
+                <div class="character-preview">
+                    <h3>Available Characters</h3>
+                    <div id="char-preview" class="char-display"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Entropy Calculation</h3>
+            <p><strong>Formula:</strong> E = L × Log₂(R)</p>
+            <p>E = Entropy (bits) | L = Password Length | R = Character Pool Size</p>
+
+            <h3>Security Recommendations</h3>
+            <p><strong>Minimum recommended entropy:</strong> 80 bits (ANSSI)</p>
+            <p><strong>Good protection:</strong> 100+ bits</p>
+
+            <h3>Sources</h3>
+            <ul class="sources-list">
+                <li>
+                    <strong>Entropy Calculation:</strong>
+                    <a href="https://proton.me/blog/what-is-password-entropy" target="_blank" rel="noopener noreferrer">
+                        What is Password Entropy? - Proton
+                    </a>
+                </li>
+                <li>
+                    <strong>Security Standards:</strong>
+                    <a href="https://cyber.gouv.fr/sites/default/files/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf" target="_blank" rel="noopener noreferrer">
+                        ANSSI - Guide Authentification Multifacteur et Mots de Passe (PDF)
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast">Password copied to clipboard!</div>
+
+    <script>
+// Embedded layouts data
+var layouts = {
+    "common": {
+        "lowercase": ["b","c","d","e","f","g","h","i","j","k","l","n","o","p","r","s","t","u","v","x","y"],
+        "uppercase": ["B","C","D","E","F","G","H","I","J","K","L","N","O","P","R","S","T","U","V","X","Y"],
+        "numbers": [],
+        "special": []
+    }
+};
+
+// DOM Elements
+var passwordLength = document.getElementById('password-length');
+var lengthValue = document.getElementById('length-value');
+var includeLowercase = document.getElementById('include-lowercase');
+var includeUppercase = document.getElementById('include-uppercase');
+var generateBtn = document.getElementById('generate-btn');
+var passwordOutput = document.getElementById('password-output');
+var copyBtn = document.getElementById('copy-btn');
+var poolSize = document.getElementById('pool-size');
+var actualLength = document.getElementById('actual-length');
+var entropyValue = document.getElementById('entropy-value');
+var strengthBar = document.getElementById('strength-bar');
+var strengthText = document.getElementById('strength-text');
+var charPreview = document.getElementById('char-preview');
+var toast = document.getElementById('toast');
+
+// Event Listeners
+passwordLength.addEventListener('input', function(e) {
+    lengthValue.textContent = e.target.value;
+});
+
+includeLowercase.addEventListener('change', updateCharacterPreview);
+includeUppercase.addEventListener('change', updateCharacterPreview);
+
+generateBtn.addEventListener('click', generatePassword);
+copyBtn.addEventListener('click', copyToClipboard);
+
+// Update character preview based on current settings
+function updateCharacterPreview() {
+    var layout = layouts.common;
+    var availableChars = [];
+
+    if (includeLowercase.checked) {
+        availableChars = availableChars.concat(layout.lowercase);
+    }
+    if (includeUppercase.checked) {
+        availableChars = availableChars.concat(layout.uppercase);
+    }
+
+    if (availableChars.length === 0) {
+        charPreview.textContent = 'Please select at least one character type.';
+        charPreview.className = 'char-display empty';
+    } else {
+        charPreview.textContent = availableChars.join(' ');
+        charPreview.className = 'char-display';
+    }
+}
+
+// Generate a secure random password
+function generatePassword() {
+    var layout = layouts.common;
+    var length = parseInt(passwordLength.value);
+
+    // Build character pool based on selections
+    var charPool = [];
+
+    if (includeLowercase.checked) {
+        charPool = charPool.concat(layout.lowercase);
+    }
+    if (includeUppercase.checked) {
+        charPool = charPool.concat(layout.uppercase);
+    }
+
+    // Validate at least one character type is selected
+    if (charPool.length === 0) {
+        alert('Please select at least one character type.');
+        return;
+    }
+
+    // Generate password using cryptographically secure random
+    var password = '';
+    var randomValues = new Uint32Array(length);
+    window.crypto.getRandomValues(randomValues);
+
+    for (var i = 0; i < length; i++) {
+        var randomIndex = randomValues[i] % charPool.length;
+        password += charPool[randomIndex];
+    }
+
+    // Display password
+    passwordOutput.value = password;
+    copyBtn.disabled = false;
+
+    // Calculate and display entropy
+    calculateEntropy(password.length, charPool.length);
+}
+
+// Calculate password entropy using E = L × Log2(R)
+function calculateEntropy(L, R) {
+    // E = L × Log2(R)
+    // L = password length
+    // R = character pool size
+    var entropy = L * Math.log2(R);
+
+    // Update display
+    poolSize.textContent = R;
+    actualLength.textContent = L;
+    entropyValue.textContent = entropy.toFixed(2) + ' bits';
+
+    // Update strength bar and text
+    updateStrengthIndicator(entropy);
+}
+
+// Update visual strength indicator
+function updateStrengthIndicator(entropy) {
+    var strength = '';
+    var percentage = 0;
+    var color = '';
+
+    if (entropy < 80) {
+        strength = 'NOT SECURE ENOUGH - Increase length or character types';
+        percentage = Math.min((entropy / 80) * 50, 50);
+        color = '#d32f2f';
+    } else if (entropy < 100) {
+        strength = 'Acceptable - Meets minimum security requirements';
+        percentage = 65;
+        color = '#f57c00';
+    } else if (entropy < 128) {
+        strength = 'Strong - Good protection';
+        percentage = 85;
+        color = '#7cb342';
+    } else {
+        strength = 'Very Strong - Excellent protection';
+        percentage = 100;
+        color = '#388e3c';
+    }
+
+    strengthBar.style.width = percentage + '%';
+    strengthBar.style.backgroundColor = color;
+    strengthText.textContent = strength;
+    strengthText.style.color = color;
+}
+
+// Copy password to clipboard
+function copyToClipboard() {
+    passwordOutput.select();
+    passwordOutput.setSelectionRange(0, 99999); // For mobile devices
+
+    // Try modern clipboard API first
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(passwordOutput.value).then(function() {
+            showToast();
+        }).catch(function(err) {
+            console.error('Failed to copy:', err);
+            fallbackCopy();
+        });
+    } else {
+        fallbackCopy();
+    }
+}
+
+// Fallback copy method for older browsers
+function fallbackCopy() {
+    try {
+        document.execCommand('copy');
+        showToast();
+    } catch (err) {
+        console.error('Failed to copy:', err);
+    }
+}
+
+// Show toast notification
+function showToast() {
+    toast.className = 'toast show';
+    setTimeout(function() {
+        toast.className = 'toast';
+    }, 3000);
+}
+
+// Initialize on page load
+window.addEventListener('load', function() {
+    updateCharacterPreview();
+});
+    </script>
+</body>
+</html>
